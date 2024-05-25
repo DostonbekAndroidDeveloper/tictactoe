@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2862F6"
+    android:orientation="vertical"
+    tools:context=".GameActivity">
+
+
+    <ImageView
+        android:id="@+id/main_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/title"
+        android:focusable="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/game_status_text"
+       />
+
+
+    <TextView
+        android:id="@+id/game_status_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:letterSpacing="0.04"
+        android:text="Game not started"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/grid"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="15dp"
+        android:columnCount="3"
+        app:layout_constraintBottom_toTopOf="@id/start_game_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/grid_0"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="8dp"
+            android:background="@color/white"
+            android:tag="0"
+
+            android:text="X"
+
+            android:textColor="@color/black"
+            android:textSize="60sp"
+            app:cardCornerRadius="14dp">
+
+            <TextView
+                android:id="@+id/btn_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="X"
+                android:textColor="@color/black"
+                android:textSize="60sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/grid_1"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+
+            android:tag="1"
+            android:text="X"
+            android:textColor="@color/black"
+
+            android:textSize="60sp"
+            app:cardCornerRadius="14dp">
+
+            <TextView
+                android:id="@+id/btn_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="X"
+                android:textColor="@color/black"
+                android:textSize="60sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/grid_2"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+
+            android:tag="2"
+            android:text="X"
+            android:textColor="@color/black"
+            android:textSize="60sp"
+
+            app:cardCornerRadius="14dp">
+
+            <TextView
+                android:id="@+id/btn_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="X"
+                android:textColor="@color/black"
+                android:textSize="60sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/grid_3"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            android:tag="3"
+
+            android:text="X"
+            android:textColor="@color/black"
+            android:textSize="60sp"
+            app:cardCornerRadius="14dp">
+
+            <TextView
+                android:id="@+id/btn_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="X"
+                android:textColor="@color/black"
+                android:textSize="60sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/grid_4"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            android:tag="4"
+
+            android:text="X"
+
+            android:textColor="@color/black"
+            android:textSize="60sp"
+            app:cardCornerRadius="14dp">
+
+            <TextView
+                android:id="@+id/btn_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="X"
+                android:textColor="@color/black"
+                android:textSize="60sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/grid_5"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+
+            android:tag="5"
+            android:text="X"
+            android:textColor="@color/black"
+            android:textSize="60sp"
+            app:cardCornerRadius="14dp">
+
+            <TextView
+                android:id="@+id/btn_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="X"
+                android:textColor="@color/black"
+                android:textSize="60sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/grid_6"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            android:tag="6"
+
+
+            android:text="X"
+            android:textColor="@color/black"
+            android:textSize="60sp"
+            app:cardCornerRadius="14dp">
+
+            <TextView
+                android:id="@+id/btn_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="X"
+                android:textColor="@color/black"
+                android:textSize="60sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/grid_7"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+
+            android:tag="7"
+            android:text="X"
+            android:textColor="@color/black"
+            android:textSize="60sp"
+            app:cardCornerRadius="14dp">
+
+            <TextView
+                android:id="@+id/btn_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="X"
+                android:textColor="@color/black"
+                android:textSize="60sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/grid_8"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_margin="8dp"
+            android:background="@color/white"
+
+            android:tag="8"
+            android:text="X"
+            android:textColor="@color/black"
+            android:textSize="60sp"
+            app:cardCornerRadius="14dp">
+
+            <TextView
+                android:id="@+id/btn_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="X"
+                android:textColor="@color/black"
+                android:textSize="60sp" />
+        </androidx.cardview.widget.CardView>
+
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/start_game_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:backgroundTint="#CDDC39"
+        android:text="Start"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
