@@ -14,6 +14,7 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivityGameBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        GameData.fetchGameModel()
 
         binding.grid0.setOnClickListener(this)
         binding.grid1.setOnClickListener(this)
@@ -71,9 +72,13 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
                     GameStatus.INPROGRESS -> {
 
                         binding.startGameBtn.visibility = View.INVISIBLE
-                        currentPlayer + " turn"
+                        when (GameData.myId) {
+                            currentPlayer -> "Your Turn"
 
 
+                            else -> "$currentPlayer Turn"
+
+                        }
                     }
 
                     GameStatus.FINISHED -> {
@@ -99,7 +104,14 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
                         alertDialog.show()
 
 
-                        if (winner.isNotEmpty()) winner + " Won"
+                        if (winner.isNotEmpty()) {
+                            when (GameData.myId) {
+
+
+                                winner -> "You won"
+                                else -> winner + "Won"
+                            }
+                        }
                         else "No Winner"
                     }
                 }
@@ -154,6 +166,12 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
             if (gameStatus != GameStatus.INPROGRESS) {
                 Toast.makeText(applicationContext, "Game not started", Toast.LENGTH_SHORT).show()
                 return
+            }
+            if (gameId!= "-1" && currentPlayer != GameData.myId) {
+                Toast.makeText(applicationContext, "Not Your Turn", Toast.LENGTH_SHORT).show()
+                return
+
+
             }
             // game started
             val clickedPas = (v?.tag as String).toInt()
